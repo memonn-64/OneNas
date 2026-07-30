@@ -32,7 +32,7 @@ export default function AboutPage() {
         eyebrow="About Us"
         title="Two decades turning recoverable material into value."
         intro="Founded in 2001, we have spent more than twenty years building a reliable, international recycling and commodity-trading business."
-        image="https://images.unsplash.com/photo-1542013936693-884638332954?q=80&w=2400&auto=format&fit=crop"
+        image="/images/about/5streams.png"
       />
 
       <section className="py-24 md:py-32">
@@ -42,6 +42,13 @@ export default function AboutPage() {
             <h2 className="heading-xl mt-5 text-3xl text-forest md:text-4xl">
               Built on experience, scaled through trade.
             </h2>
+            <div className="mt-8 overflow-hidden rounded-2xl shadow-card">
+              <img
+                src="/images/about/factory.png"
+                alt="OneNas processing facility"
+                className="w-full object-cover"
+              />
+            </div>
           </Reveal>
           <Reveal delay={0.1} className="space-y-5 text-lg leading-relaxed text-charcoal/75">
             <p>
@@ -66,10 +73,10 @@ export default function AboutPage() {
 
       <section className="bg-gray-soft py-24 md:py-28">
         <div className="container-x grid gap-6 md:grid-cols-2">
-          <Reveal className="rounded-2xl bg-white p-10 shadow-card">
-            <Target className="text-emerald" size={30} strokeWidth={1.8} />
-            <h3 className="mt-5 font-display text-2xl font-semibold text-forest">Our Mission</h3>
-            <p className="mt-4 text-lg leading-relaxed text-charcoal/75">
+          <Reveal className="rounded-2xl bg-royal p-10 shadow-card text-white">
+            <Target className="text-white/70" size={30} strokeWidth={1.8} />
+            <h3 className="mt-5 font-display text-2xl font-semibold text-white">Our Mission</h3>
+            <p className="mt-4 text-lg leading-relaxed text-white/80">
               Helping businesses reduce waste while maximizing material value —
               through dependable recycling and transparent global trade.
             </p>
@@ -95,8 +102,8 @@ export default function AboutPage() {
           </Reveal>
           <RevealGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {values.map((v) => (
-              <Item key={v.title} className="rounded-2xl border border-gray-line p-8 transition-colors hover:border-emerald/40">
-                <v.icon className="text-emerald" size={26} strokeWidth={1.8} />
+              <Item key={v.title} className="rounded-2xl border border-gray-line p-8 transition-colors hover:border-royal/40 hover:bg-royal/5">
+                <v.icon className="text-royal" size={26} strokeWidth={1.8} />
                 <h3 className="mt-5 font-display text-lg font-semibold text-charcoal">{v.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-charcoal/65">{v.text}</p>
               </Item>

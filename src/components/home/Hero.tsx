@@ -10,8 +10,9 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-forest">
       <div className="absolute inset-0">
+        {/* Replace with actual OneNas image: /images/hero/hero-main.jpg */}
         <img
-          src="https://images.unsplash.com/photo-1567113463300-102a7eb3cb26?q=80&w=2400&auto=format&fit=crop"
+          src="/images/homepage.avif"
           alt="Recycling facility processing recovered materials"
           className="h-full w-full object-cover"
         />
@@ -19,7 +20,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-forest/90 via-transparent to-forest/40" />
       </div>
 
-      <div className="container-x relative pt-28">
+      <div className="container-x relative pt-28 pb-36 md:pb-40">
         <motion.div
           initial="hidden"
           animate="show"
@@ -57,7 +58,7 @@ export default function Hero() {
           >
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-emerald px-7 py-4 text-sm font-semibold text-white transition-all hover:bg-emerald-light hover:shadow-xl"
+              className="group inline-flex items-center gap-2 rounded-full bg-royal px-7 py-4 text-sm font-semibold text-white transition-all hover:bg-royal-mid hover:shadow-xl"
             >
               Request a Quote
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

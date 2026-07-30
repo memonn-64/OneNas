@@ -1,21 +1,21 @@
 export const site = {
-  name: "[Company Name]",
-  legalName: "[Company Name] Inc.",
+  name: "OneNas",
+  legalName: "OneNas Inc.",
   tagline: "Transforming Waste Into Value Since 2001",
   founded: 2001,
-  email: "info@example.com",
-  phoneCanada: "+1 (000) 000-0000",
-  phoneUAE: "+971 0 000 0000",
+  email: "onenasgroup@gmail.com",
+  phoneCanada: "+1 (437) 247-6612",
+  phoneUAE: "+971 505376571",
   linkedin: "https://www.linkedin.com/",
   hours: "Sun–Fri, 8:00 AM – 6:00 PM (local time)",
   offices: {
     canada: {
       label: "Canada Office",
-      address: "000 Industrial Parkway, Ontario, Canada",
+      address: "1811 - 430 Square One Drive, L5B 0L6, Mississauga, ON, Canada",
     },
     uae: {
       label: "UAE Office",
-      address: "000 Industrial Area, United Arab Emirates",
+      address: "Meydan Grandstand 6th Floor Meydan Road, Nad Al Sheba, Dubai, United Arab Emirates",
     },
   },
 };
@@ -25,7 +25,7 @@ export const nav = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Sustainability", href: "/sustainability" },
-  { label: "Industries", href: "/industries" },
+  { label: "Gallery", href: "/industries" },
   { label: "Contact", href: "/contact" },
 ];
 

@@ -42,8 +42,8 @@ export default function WhyChooseUs() {
 
         <RevealGroup className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-gray-line bg-gray-line sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((r) => (
-            <Item key={r.title} className="bg-white p-8 transition-colors hover:bg-gray-soft">
-              <r.icon className="text-emerald" size={26} strokeWidth={1.8} />
+            <Item key={r.title} className="bg-white p-8 transition-colors hover:bg-royal/5">
+              <r.icon className="text-royal" size={26} strokeWidth={1.8} />
               <h3 className="mt-5 font-display text-lg font-semibold text-charcoal">
                 {r.title}
               </h3>

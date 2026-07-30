@@ -14,8 +14,9 @@ export default function AboutPreview() {
       <div className="container-x grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal className="relative">
           <div className="relative overflow-hidden rounded-2xl shadow-card">
+            {/* Replace with actual OneNas image: /images/about/about-preview.jpg */}
             <img
-              src="https://images.unsplash.com/photo-1591193686104-fdccd5e6e35e0?q=80&w=1600&auto=format&fit=crop"
+              src="/images/about/default.jpg"
               alt="Baled recovered material ready for export"
               className="aspect-[4/5] w-full object-cover"
             />

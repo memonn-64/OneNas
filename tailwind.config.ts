@@ -15,6 +15,9 @@ const config: Config = {
         "gray-soft": "#F4F6F5",
         "gray-line": "#E3E8E5",
         trust: "#1B5E8C",
+        royal: "#1E3A8A",
+        "royal-mid": "#2563EB",
+        "royal-light": "#3B82F6",
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],

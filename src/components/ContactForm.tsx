@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle2 } from "lucide-react";
+import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 import { materials } from "@/lib/site";
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -20,10 +22,23 @@ export default function ContactForm() {
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
       setForm((f) => ({ ...f, [key]: e.target.value }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Wire this to your backend / email service (e.g. an API route or form provider).
-    setSent(true);
+    setLoading(true);
+    setError(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error();
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (sent) {
@@ -42,14 +57,14 @@ export default function ContactForm() {
   }
 
   const inputClass =
-    "w-full rounded-lg border border-gray-line bg-white px-4 py-3 text-charcoal outline-none transition-colors placeholder:text-charcoal/40 focus:border-emerald focus:ring-2 focus:ring-emerald/20";
+    "w-full rounded-lg border border-gray-line bg-white px-4 py-3 text-charcoal outline-none transition-colors placeholder:text-charcoal/40 focus:border-royal focus:ring-2 focus:ring-royal/20";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5" noValidate>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-charcoal">
-            Name <span className="text-emerald">*</span>
+            Name <span className="text-royal">*</span>
           </label>
           <input id="name" required value={form.name} onChange={update("name")} className={inputClass} placeholder="Your full name" />
         </div>
@@ -61,7 +76,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-charcoal">
-            Email <span className="text-emerald">*</span>
+            Email <span className="text-royal">*</span>
           </label>
           <input id="email" type="email" required value={form.email} onChange={update("email")} className={inputClass} placeholder="you@company.com" />
         </div>
@@ -87,16 +102,24 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-charcoal">
-          Message <span className="text-emerald">*</span>
+          Message <span className="text-royal">*</span>
         </label>
         <textarea id="message" required rows={5} value={form.message} onChange={update("message")} className={inputClass} placeholder="Tell us about your material, volumes and goals." />
       </div>
 
+      {error && (
+        <div className="flex items-center gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+          <AlertCircle size={16} />
+          Something went wrong. Please try again or email us directly at onenasgroup@gmail.com.
+        </div>
+      )}
+
       <button
         type="submit"
-        className="group inline-flex items-center gap-2 rounded-full bg-emerald px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-forest hover:shadow-lg"
+        disabled={loading}
+        className="group inline-flex items-center gap-2 rounded-full bg-royal px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-royal-mid hover:shadow-lg disabled:opacity-60"
       >
-        Send Request
+        {loading ? "Sending…" : "Send Request"}
         <Send size={16} className="transition-transform group-hover:translate-x-0.5" />
       </button>
     </form>

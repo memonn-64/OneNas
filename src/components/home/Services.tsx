@@ -22,12 +22,12 @@ export default function Services() {
                 className="group flex h-full flex-col rounded-2xl bg-white p-7 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover"
               >
                 <div className="flex items-start justify-between">
-                  <span className="grid h-12 w-12 place-items-center rounded-xl bg-forest/5 text-forest transition-colors group-hover:bg-emerald group-hover:text-white">
+                  <span className="grid h-12 w-12 place-items-center rounded-xl bg-forest/5 text-forest transition-colors group-hover:bg-royal group-hover:text-white">
                     <s.icon size={22} strokeWidth={1.9} />
                   </span>
                   <ArrowUpRight
                     size={20}
-                    className="text-charcoal/30 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-emerald"
+                    className="text-charcoal/30 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-royal"
                   />
                 </div>
                 <h3 className="mt-6 font-display text-xl font-semibold text-charcoal">

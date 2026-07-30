@@ -3,6 +3,7 @@ import Metrics from "@/components/home/Metrics";
 import AboutPreview from "@/components/home/AboutPreview";
 import Services from "@/components/home/Services";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import TeamSection from "@/components/TeamSection";
 import CtaBand from "@/components/CtaBand";
 
 export default function HomePage() {
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Metrics />
       <AboutPreview />
       <Services />
+      <TeamSection />
       <WhyChooseUs />
       <CtaBand />
     </>

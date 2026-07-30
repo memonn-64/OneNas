@@ -20,75 +20,75 @@ export type Service = {
 
 export const services: Service[] = [
   {
+    slug: "used-oil",
+    icon: Droplets,
+    title: "Used Oil Recycling",
+    short:
+      "We pick up used engine oil directly from your facility — handling collection, transportation, and responsible recycling so you don't have to.",
+    image:
+      "/images/services/oil.png",
+    grades: ["On-Site Collection", "Safe Transport", "Recovery Markets", "Sustainability"],
+    detail:
+      "OneNas provides direct pick-up of used engine oil from industrial facilities, garages, manufacturers, and fleet operators. Our team handles the full process — collection, safe transportation, and delivery to licensed recovery facilities and refiners. We take care of all logistics and documentation, ensuring your operation stays compliant while valuable resources are directed toward responsible reuse.",
+  },
+  {
     slug: "scrap-paper",
     icon: Newspaper,
     title: "Scrap Paper Recycling",
     short:
-      "Sourcing, baling and export of recovered fibre grades for global paper mills.",
+      "Supplying recovered paper grades to paper mills, recycling facilities, and other downstream markets worldwide.",
     image:
-      "https://images.unsplash.com/photo-1605600659908-0ef719419d41?q=80&w=1600&auto=format&fit=crop",
+      "/images/services/paper_bales.jpg",
     grades: ["OCC", "Mixed Paper", "Newsprint", "Cardboard"],
     detail:
-      "We collect, sort and bale recovered fibre to consistent, mill-ready specifications, then move it to domestic and international buyers through established logistics channels.",
+      "OneNas sources and supplies recovered paper products to recycling facilities, paper mills, and industrial buyers worldwide. Through our extensive network and logistics expertise, we help move quality fiber materials efficiently across global markets.",
   },
   {
     slug: "plastic",
     icon: Recycle,
     title: "Plastic Recycling",
     short:
-      "Recovery and trading of post-industrial and post-consumer polymers.",
+      "Connecting recyclable plastics with processors, manufacturers, and other recycling markets across global supply chains.",
     image:
-      "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=1600&auto=format&fit=crop",
+      "/images/services/plastic_scrap.jpg",
     grades: ["PET", "HDPE", "LDPE", "Industrial Plastics"],
     detail:
-      "From baled bottles to industrial regrind, we aggregate, grade and supply polymer streams to reprocessors and manufacturers seeking reliable recycled feedstock.",
+      "OneNas sources and supplies recyclable plastic materials through a trusted network of processors, manufacturers, and recycling partners. By facilitating efficient material flows and market access, we help support circular economy initiatives while delivering reliable trading solutions across global markets.",
   },
   {
     slug: "metal",
     icon: Wrench,
     title: "Metal Recycling",
     short:
-      "Ferrous and non-ferrous scrap handling for industrial and commercial generators.",
+      "Sourcing and supplying ferrous and non-ferrous metals to foundries, smelters, and industrial consumers worldwide.",
     image:
-      "https://images.unsplash.com/photo-1605557202138-c7e5f8e8e7a3?q=80&w=1600&auto=format&fit=crop",
-    grades: ["Ferrous Metals", "Non-Ferrous Metals", "Industrial Scrap"],
+      "/images/services/Metal_scrap.jpg",
+    grades: ["Ferrous Metals", "Non-Ferrous Metals", "Industrial Scrap", "Heavy Melting Scrap (HMS)"],
     detail:
-      "We purchase and process metal scrap from facilities of every size, recovering value through accurate grading, processing and access to international metal markets.",
+      "OneNas facilitates the trading and recycling of ferrous and non-ferrous metals for industrial buyers, processors, and manufacturers. Leveraging strong market relationships and international logistics expertise, we help move valuable metal resources efficiently throughout the global supply chain.",
   },
   {
-    slug: "used-engine-oil",
-    icon: Droplets,
-    title: "Used Oil Recovery",
-    short:
-      "Compliant collection, processing and recovery of used engine oil.",
-    image:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1600&auto=format&fit=crop",
-    grades: ["Collection", "Processing", "Recovery"],
-    detail:
-      "Our used-oil program keeps a hazardous waste stream out of the environment, channelling collected oil through responsible processing and recovery pathways.",
-  },
-  {
-    slug: "tires",
+    slug: "tire",
     icon: CircleDot,
     title: "Tire Recycling",
     short:
-      "Collection and resource recovery that diverts end-of-life tires from landfill.",
+      "Connecting end-of-life tires with recyclers, processors, and resource recovery partners across international markets.",
     image:
-      "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?q=80&w=1600&auto=format&fit=crop",
-    grades: ["Collection", "Recycling", "Resource Recovery"],
+      "/images/services/tire.jpg",
+    grades: ["Global Sourcing", "Tire Trading", "Industry Partnerships"],
     detail:
-      "End-of-life tires are collected and directed to recycling and resource-recovery outlets, turning a difficult waste stream into usable downstream material.",
+      "OneNas specializes in the purchase and sale of end-of-life tires, connecting suppliers, recyclers, and downstream processors across international markets through reliable trading and logistics solutions.",
   },
   {
     slug: "commodity-trading",
     icon: Ship,
     title: "Commodity Trading",
     short:
-      "International sourcing, export, import and supply-chain management.",
+      "Supporting manufacturers, recyclers, and industrial buyers through global sourcing and commodity trading solutions.",
     image:
       "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=1600&auto=format&fit=crop",
     grades: ["International Sourcing", "Export & Import", "Supply Chain Management"],
     detail:
-      "Our trading desk connects suppliers and buyers across borders, managing pricing, documentation, logistics and compliance for dependable recycled-commodity flows.",
+      "OneNas provides commodity trading solutions across a range of recyclable and industrial materials. With over two decades of experience, we connect buyers and sellers through reliable sourcing, competitive market access, and efficient logistics coordination across international markets.",
   },
 ];

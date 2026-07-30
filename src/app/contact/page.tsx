@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Mail, Phone, Clock, MapPin } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import ContactForm from "@/components/ContactForm";
+import TeamSection from "@/components/TeamSection";
 import { Reveal } from "@/components/motion";
 import { site } from "@/lib/site";
 
@@ -23,7 +24,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Let's talk about your material."
         intro="Request a quote, ask about a program, or connect with our trading desk. We respond to every enquiry from Canada and the UAE."
-        image="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=2400&auto=format&fit=crop"
+        image="/images/gallery/metal_1.jpeg"
       />
 
       <section className="py-24 md:py-32">
@@ -42,24 +43,24 @@ export default function ContactPage() {
           </Reveal>
 
           <Reveal delay={0.1} className="space-y-8">
-            <div className="rounded-2xl bg-gray-soft p-8">
+            <div className="rounded-2xl bg-royal/5 border border-royal/15 p-8">
               <h3 className="font-display text-xl font-semibold text-forest">
                 Get in touch
               </h3>
               <ul className="mt-6 space-y-5 text-charcoal/80">
                 <li className="flex items-start gap-3">
-                  <Mail size={18} className="mt-0.5 shrink-0 text-emerald" />
+                  <Mail size={18} className="mt-0.5 shrink-0 text-royal" />
                   <a href={`mailto:${site.email}`} className="link-underline">{site.email}</a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Phone size={18} className="mt-0.5 shrink-0 text-emerald" />
+                  <Phone size={18} className="mt-0.5 shrink-0 text-royal" />
                   <span>
                     {site.phoneCanada} <span className="text-charcoal/40">(Canada)</span><br />
                     {site.phoneUAE} <span className="text-charcoal/40">(UAE)</span>
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Clock size={18} className="mt-0.5 shrink-0 text-emerald" />
+                  <Clock size={18} className="mt-0.5 shrink-0 text-royal" />
                   <span>{site.hours}</span>
                 </li>
               </ul>
@@ -68,7 +69,7 @@ export default function ContactPage() {
             {offices.map((o) => (
               <div key={o.label} className="rounded-2xl border border-gray-line p-8">
                 <div className="flex items-center gap-2">
-                  <MapPin size={18} className="text-emerald" />
+                  <MapPin size={18} className="text-royal" />
                   <h3 className="font-display text-lg font-semibold text-charcoal">{o.label}</h3>
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-charcoal/65">{o.address}</p>
@@ -79,20 +80,37 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <TeamSection />
+
       <section className="pb-24 md:pb-32">
-        <div className="container-x">
-          <Reveal className="overflow-hidden rounded-2xl border border-gray-line">
-            <iframe
-              title="Office locations map"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-100%2C20%2C60%2C60&layer=mapnik"
-              className="h-[420px] w-full"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+        <div className="container-x space-y-6">
+          <Reveal>
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-charcoal/40">Canada Office</p>
+            <div className="overflow-hidden rounded-2xl border border-gray-line shadow-card">
+              <iframe
+                title="OneNas Canada Office"
+                src="https://maps.google.com/maps?q=430+Square+One+Drive+Mississauga+ON+Canada&output=embed"
+                className="h-[380px] w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
           </Reveal>
-          <p className="mt-4 text-center text-sm text-charcoal/50">
-            Replace this embed with a Google Maps iframe pinned to your Canada and UAE office addresses.
-          </p>
+
+          <Reveal delay={0.1}>
+            <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-charcoal/40">UAE Office</p>
+            <div className="overflow-hidden rounded-2xl border border-gray-line shadow-card">
+              <iframe
+                title="OneNas UAE Office"
+                src="https://maps.google.com/maps?q=Meydan+Grandstand+Nad+Al+Sheba+Dubai+UAE&output=embed"
+                className="h-[380px] w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
     </>

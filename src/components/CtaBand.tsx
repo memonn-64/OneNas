@@ -28,7 +28,7 @@ export default function CtaBand({
           <div className="mt-9 flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full bg-emerald px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-emerald-light hover:shadow-lg"
+              className="group inline-flex items-center gap-2 rounded-full bg-royal px-7 py-3.5 text-sm font-semibold text-white transition-all hover:bg-royal-mid hover:shadow-lg"
             >
               Request a Quote
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />

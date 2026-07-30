@@ -73,7 +73,7 @@ export default function Navbar() {
         <div className="hidden lg:block">
           <Link
             href="/contact"
-            className="rounded-full bg-emerald px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-forest hover:shadow-lg"
+            className="rounded-full bg-royal px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-royal-mid hover:shadow-lg"
           >
             Request a Quote
           </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
             <li className="pt-3">
               <Link
                 href="/contact"
-                className="block rounded-full bg-emerald px-5 py-3 text-center text-sm font-semibold text-white"
+                className="block rounded-full bg-royal px-5 py-3 text-center text-sm font-semibold text-white"
               >
                 Request a Quote
               </Link>
