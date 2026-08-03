@@ -5,6 +5,7 @@ export const site = {
   founded: 2001,
   email: "onenasgroup@gmail.com",
   phoneCanada: "+1 (437) 247-6612",
+  phoneCanada2: "+1 (437) 973-1598",
   phoneUAE: "+971 505376571",
   linkedin: "https://www.linkedin.com/",
   hours: "Sun–Fri, 8:00 AM – 6:00 PM (local time)",

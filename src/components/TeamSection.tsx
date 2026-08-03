@@ -27,7 +27,7 @@ const team = [
     bio: "Leads commodity trading and export strategy, connecting our material streams with buyers across international markets and managing compliance and documentation.",
     email: "Nabil.onenas@outlook.com",
     // Replace with actual photo: /images/team/head-trade.jpg
-    photo: "https://images-eu.ssl-images-amazon.com/images/I/61xCOGAlU0L._AC_UL495_SR435,495_.jpg?th=1&psc=1",
+    photo: "/images/team/Nabil.jpg",
     initials: "HT",
   },
 ];

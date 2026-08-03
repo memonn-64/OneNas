@@ -56,6 +56,7 @@ export default function ContactPage() {
                   <Phone size={18} className="mt-0.5 shrink-0 text-royal" />
                   <span>
                     {site.phoneCanada} <span className="text-charcoal/40">(Canada)</span><br />
+                    {site.phoneCanada2} <span className="text-charcoal/40">(Canada)</span><br />
                     {site.phoneUAE} <span className="text-charcoal/40">(UAE)</span>
                   </span>
                 </li>

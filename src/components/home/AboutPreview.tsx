@@ -16,9 +16,9 @@ export default function AboutPreview() {
           <div className="relative overflow-hidden rounded-2xl shadow-card">
             {/* Replace with actual OneNas image: /images/about/about-preview.jpg */}
             <img
-              src="/images/about/default.jpg"
+              src="/images/about/recycling_homepage_image.webp"
               alt="Baled recovered material ready for export"
-              className="aspect-[4/5] w-full object-cover"
+              className="aspect-[4/3] w-full object-cover"
             />
           </div>
           <div className="absolute -bottom-6 -right-4 hidden rounded-xl bg-forest p-6 text-white shadow-card-hover sm:block lg:-right-8">

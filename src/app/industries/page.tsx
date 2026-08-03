@@ -9,86 +9,28 @@ import { Reveal, RevealGroup, Item } from "@/components/motion";
 // Add your images to /public/images/ and list them here.
 // Format: { src, caption, category }
 const gallery = [
-  {
-    src: "/images/gallery/metal_1.jpeg",
-    caption: "Metal Scrap — Ferrous & Non-Ferrous",
-    category: "Metal Recycling",
-  },
-  {
-    src: "/images/gallery/oil_1.jpeg",
-    caption: "Used Oil — On-Site Collection",
-    category: "Used Oil",
-  },
-  {
-    src: "/images/gallery/oil_2.jpeg",
-    caption: "Used Oil — Facility Pick-Up",
-    category: "Used Oil",
-  },
-  {
-    src: "/images/gallery/oil_3.jpeg",
-    caption: "Used Oil — Ready for Recovery",
-    category: "Used Oil",
-  },
-  {
-    src: "/images/gallery/paper_1.jpeg",
-    caption: "Scrap Paper — Ready for Market",
-    category: "Scrap Paper",
-  },
-  {
-    src: "/images/gallery/paper_2.jpeg",
-    caption: "Paper Bales — Recovered & Sorted",
-    category: "Scrap Paper",
-  },
-  {
-    src: "/images/gallery/paper_3.jpeg",
-    caption: "Recovered Paper — Graded for Export",
-    category: "Scrap Paper",
-  },
-  {
-    src: "/images/gallery/plastic_1.jpeg",
-    caption: "Plastic Scrap — Sorted & Graded",
-    category: "Plastic Recycling",
-  },
-  {
-    src: "/images/gallery/plastic_2.jpeg",
-    caption: "Plastic Bales — Ready for Processing",
-    category: "Plastic Recycling",
-  },
-  {
-    src: "/images/gallery/plastic_3.jpeg",
-    caption: "Recovered Plastic — Graded & Sorted",
-    category: "Plastic Recycling",
-  },
-  {
-    src: "/images/gallery/plastic_4.jpeg",
-    caption: "Plastic Recovery — Industrial Grade",
-    category: "Plastic Recycling",
-  },
-  {
-    src: "/images/gallery/plastic_5.jpeg",
-    caption: "Plastic Scrap — Mixed Grades",
-    category: "Plastic Recycling",
-  },
-  {
-    src: "/images/gallery/plastic_6.jpeg",
-    caption: "Plastic Bales — Export Ready",
-    category: "Plastic Recycling",
-  },
-  {
-    src: "/images/gallery/tire_1.jpeg",
-    caption: "Tire Collection — Ready for Recovery",
-    category: "Tire Recycling",
-  },
-  {
-    src: "/images/about/5streams.png",
-    caption: "Our Five Core Material Streams",
-    category: "Operations",
-  },
-  {
-    src: "/images/about/factory.png",
-    caption: "Processing Facility",
-    category: "Operations",
-  },
+  { src: "/images/gallery/metal_1.jpeg", caption: "Metal Scrap", category: "Metal Recycling" },
+  { src: "/images/gallery/metal.jpeg", caption: "Metal Scrap", category: "Metal Recycling" },
+  { src: "/images/gallery/metal1.jpeg", caption: "Metal Scrap", category: "Metal Recycling" },
+  { src: "/images/gallery/metal2.jpeg", caption: "Metal Scrap", category: "Metal Recycling" },
+  { src: "/images/gallery/oil_1.jpeg", caption: "Used Oil", category: "Used Oil" },
+  { src: "/images/gallery/oil_2.jpeg", caption: "Used Oil", category: "Used Oil" },
+  { src: "/images/gallery/oil_3.jpeg", caption: "Used Oil", category: "Used Oil" },
+  { src: "/images/gallery/paper_1.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
+  { src: "/images/gallery/paper.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
+  { src: "/images/gallery/paper1.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
+  { src: "/images/gallery/paper2.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
+  { src: "/images/gallery/paper3.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
+  { src: "/images/gallery/paper4.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
+  { src: "/images/gallery/plastic.jpeg", caption: "Plastic", category: "Plastic Recycling" },
+  { src: "/images/gallery/plastic_2.jpeg", caption: "Plastic", category: "Plastic Recycling" },
+  { src: "/images/gallery/plastic_4.jpeg", caption: "Plastic", category: "Plastic Recycling" },
+  { src: "/images/gallery/plastic_6.jpeg", caption: "Plastic", category: "Plastic Recycling" },
+  { src: "/images/gallery/tire.jpeg", caption: "Tires", category: "Tire Recycling" },
+  { src: "/images/gallery/tire1.jpeg", caption: "Tires", category: "Tire Recycling" },
+  { src: "/images/gallery/tirewire.jpeg", caption: "Tire Wire", category: "Tire Recycling" },
+  { src: "/images/gallery/tirewire1.jpeg", caption: "Tire Wire", category: "Tire Recycling" },
+  { src: "/images/gallery/tirewire2.jpeg", caption: "Tire Wire", category: "Tire Recycling" },
 ];
 
 const categories = ["All", ...Array.from(new Set(gallery.map((g) => g.category)))];

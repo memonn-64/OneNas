@@ -62,6 +62,8 @@ export default function Footer() {
                 <span>
                   {site.phoneCanada} <span className="text-white/40">(CA)</span>
                   <br />
+                  {site.phoneCanada2} <span className="text-white/40">(CA)</span>
+                  <br />
                   {site.phoneUAE} <span className="text-white/40">(UAE)</span>
                 </span>
               </li>
