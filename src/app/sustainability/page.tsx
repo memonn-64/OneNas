@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const commitments = [
-  { icon: Recycle, title: "Waste Diversion", text: "Keeping recoverable material out of landfill across every stream we handle." },
-  { icon: Sprout, title: "Resource Recovery", text: "Returning paper, plastic, metal, oil and rubber to productive use." },
-  { icon: BarChart3, title: "Environmental Impact", text: "Reducing the demand for virgin resources through recycled commodities." },
-  { icon: Globe2, title: "Responsible Trade", text: "Moving material to markets that recycle it under sound practices." },
+  { icon: Recycle, title: "Waste Diversion", tone: "text-forest", text: "Keeping recoverable material out of landfill across every stream we handle." },
+  { icon: Sprout, title: "Resource Recovery", tone: "text-emerald", text: "Returning paper, plastic, metal, oil and rubber to productive use." },
+  { icon: BarChart3, title: "Environmental Impact", tone: "text-emerald-light", text: "Reducing the demand for virgin resources through recycled commodities." },
+  { icon: Globe2, title: "Responsible Trade", tone: "text-royal", text: "Moving material to markets that recycle it under sound practices." },
 ];
 
 export default function SustainabilityPage() {
@@ -46,7 +46,7 @@ export default function SustainabilityPage() {
         </div>
       </section>
 
-      <section className="bg-gray-soft py-24 md:py-32">
+      <section className="bg-mint py-24 md:py-32">
         <div className="container-x">
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Our Commitments</p>
@@ -57,7 +57,7 @@ export default function SustainabilityPage() {
           <RevealGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {commitments.map((c) => (
               <Item key={c.title} className="rounded-2xl bg-white p-8 shadow-card">
-                <c.icon className="text-emerald" size={28} strokeWidth={1.8} />
+                <c.icon className={`${c.tone}`} size={28} strokeWidth={1.8} />
                 <h3 className="mt-5 font-display text-lg font-semibold text-charcoal">{c.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-charcoal/65">{c.text}</p>
               </Item>

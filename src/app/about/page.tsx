@@ -7,7 +7,7 @@ import { Reveal, RevealGroup, Item } from "@/components/motion";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Founded in 2001 with over two decades of experience in recycling and commodity trading across Canada and the UAE.",
+    "Founded in 2001 with over two decades of experience in recycling and commodity trading across Canada, the United States and the UAE.",
 };
 
 const values = [
@@ -22,7 +22,7 @@ const timeline = [
   { year: "2001", title: "Founded", text: "Established with a focus on recovered material trading." },
   { year: "2008", title: "Material Expansion", text: "Added plastics, metals and used-oil recovery to our programs." },
   { year: "2015", title: "International Growth", text: "Extended operations into the United Arab Emirates." },
-  { year: "Today", title: "Circular Leadership", text: "An integrated recycling and commodity-trading business across two continents." },
+  { year: "Today", title: "Circular Leadership", text: "An integrated recycling and commodity-trading business across Canada, the United States and the UAE." },
 ];
 
 export default function AboutPage() {
@@ -54,7 +54,7 @@ export default function AboutPage() {
             <p>
               Since 2001, our company has grown from a focused recovered-material
               trader into an integrated recycling and commodity business operating
-              across Canada and the United Arab Emirates.
+              across Canada, the United States and the United Arab Emirates.
             </p>
             <p>
               We purchase, process, trade, export and recycle scrap paper, plastic,
@@ -71,9 +71,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-gray-soft py-24 md:py-28">
+      <section className="bg-sky-tint py-24 md:py-28">
         <div className="container-x grid gap-6 md:grid-cols-2">
-          <Reveal className="rounded-2xl bg-royal p-10 shadow-card text-white">
+          <Reveal className="rounded-2xl bg-gradient-to-br from-royal-deep to-royal-mid p-10 shadow-card text-white">
             <Target className="text-white/70" size={30} strokeWidth={1.8} />
             <h3 className="mt-5 font-display text-2xl font-semibold text-white">Our Mission</h3>
             <p className="mt-4 text-lg leading-relaxed text-white/80">
@@ -81,8 +81,8 @@ export default function AboutPage() {
               through dependable recycling and transparent global trade.
             </p>
           </Reveal>
-          <Reveal delay={0.1} className="rounded-2xl bg-forest p-10 text-white shadow-card">
-            <Eye className="text-emerald-light" size={30} strokeWidth={1.8} />
+          <Reveal delay={0.1} className="rounded-2xl bg-gradient-to-br from-forest to-teal-deep p-10 text-white shadow-card">
+            <Eye className="text-lime" size={30} strokeWidth={1.8} />
             <h3 className="mt-5 font-display text-2xl font-semibold">Our Vision</h3>
             <p className="mt-4 text-lg leading-relaxed text-white/80">
               Advancing the circular economy through responsible recycling and
@@ -112,7 +112,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-gray-soft py-24 md:py-32">
+      <section className="bg-mint py-24 md:py-32">
         <div className="container-x">
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Our Journey</p>

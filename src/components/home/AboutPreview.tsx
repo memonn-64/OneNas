@@ -4,7 +4,7 @@ import { Reveal } from "@/components/motion";
 
 const points = [
   "Two decades of recycling and commodity-trading expertise",
-  "Established operations in Canada and the United Arab Emirates",
+  "Established operations in Canada and the UAE, trading across the United States",
   "End-to-end purchasing, processing, export and recycling",
 ];
 
@@ -21,7 +21,7 @@ export default function AboutPreview() {
               className="aspect-[4/3] w-full object-cover"
             />
           </div>
-          <div className="absolute -bottom-6 -right-4 hidden rounded-xl bg-forest p-6 text-white shadow-card-hover sm:block lg:-right-8">
+          <div className="absolute -bottom-6 -right-4 hidden rounded-xl bg-gradient-to-br from-forest to-forest-mid p-6 text-white shadow-card-hover sm:block lg:-right-8">
             <div className="font-display text-4xl font-semibold">2001</div>
             <div className="mt-1 text-sm text-white/70">Established</div>
           </div>

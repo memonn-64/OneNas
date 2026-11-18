@@ -6,7 +6,7 @@ const team = [
   {
     name: "Asif Memon",
     title: "Founder & CEO",
-    bio: "With over 20 years of experience in international recycling and commodity trading, our CEO has led OneNas from a focused recovered-material trader into an integrated operation spanning Canada and the UAE.",
+    bio: "With over 20 years of experience in international recycling and commodity trading, our CEO has led OneNas from a focused recovered-material trader into an integrated operation spanning Canada, the United States and the UAE.",
     email: "onenasgroup@gmail.com",
     // Replace with actual photo: /images/team/ceo.jpg
     photo: "/images/team/asif.png",
@@ -15,7 +15,7 @@ const team = [
   {
     name: "Ayaan Memon",
     title: "Director of Operations",
-    bio: "Oversees day-to-day processing, logistics, and quality control across our Canadian and UAE facilities, ensuring reliable service for every partner.",
+    bio: "Oversees day-to-day processing, logistics, and quality control across our Canadian and UAE operations, ensuring reliable service for every partner.",
     email: "ayaan.onenas@outlook.com",
     // Replace with actual photo: /images/team/director-operations.jpg
     photo: "/images/team/ayaan.png",
@@ -23,12 +23,12 @@ const team = [
   },
   {
     name: "Nabil Memon",
-    title: "Head of Global Trade",
-    bio: "Leads commodity trading and export strategy, connecting our material streams with buyers across international markets and managing compliance and documentation.",
+    title: "Logistics Coordinator",
+    bio: "Coordinates outbound shipments across our material streams — booking containers, preparing export documentation, and keeping buyers in North America and overseas updated from pickup through delivery.",
     email: "Nabil.onenas@outlook.com",
-    // Replace with actual photo: /images/team/head-trade.jpg
+    // Replace with actual photo: /images/team/logistics-coordinator.jpg
     photo: "/images/team/Nabil.jpg",
-    initials: "HT",
+    initials: "LC",
   },
 ];
 

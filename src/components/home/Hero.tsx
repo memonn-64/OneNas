@@ -16,8 +16,8 @@ export default function Hero() {
           alt="Recycling facility processing recovered materials"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-forest via-forest/85 to-forest/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest/90 via-transparent to-forest/40" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(7,59,36,0.93)_0%,rgba(15,81,50,0.70)_58%,rgba(15,81,50,0)_90%)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25" />
       </div>
 
       <div className="container-x relative pt-28 pb-36 md:pb-40">
@@ -29,9 +29,14 @@ export default function Hero() {
         >
           <motion.p
             variants={{ hidden: { opacity: 0, y: 16 }, show: { opacity: 1, y: 0, transition: { duration: 0.7, ease } } }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.16em] text-white/90 backdrop-blur"
+            className="inline-flex items-center gap-2 rounded-full border border-emerald-pale/35 bg-emerald-pale/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-white backdrop-blur"
           >
-            <MapPin size={13} /> Canada &nbsp;•&nbsp; United Arab Emirates
+            <MapPin size={13} className="text-emerald-pale" />
+            Canada
+            <span className="mx-1 text-emerald-pale">•</span>
+            United States
+            <span className="mx-1 text-emerald-pale">•</span>
+            United Arab Emirates
           </motion.p>
 
           <motion.h1
@@ -40,16 +45,17 @@ export default function Hero() {
           >
             Transforming Waste<br />
             Into Value{" "}
-            <span className="italic text-emerald-light">Since 2001</span>
+            <span className="italic text-emerald-pale">Since 2001</span>
           </motion.h1>
 
           <motion.p
             variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease } } }}
-            className="mt-7 max-w-xl text-lg leading-relaxed text-white/80 md:text-xl"
+            className="mt-7 max-w-2xl text-balance text-lg leading-relaxed text-white/80 md:text-xl"
           >
-            International recycling and commodity trading solutions across Canada
-            and the UAE — built on two decades of reliable processing, logistics,
-            and global trade.
+            Recycling and commodity trading across{" "}
+            <span className="font-semibold text-emerald-pale">Canada</span>, the{" "}
+            <span className="font-semibold text-emerald-pale">United States</span> and the{" "}
+            <span className="font-semibold text-emerald-pale">UAE</span>.
           </motion.p>
 
           <motion.div

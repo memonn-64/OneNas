@@ -34,6 +34,15 @@ body {
   @apply h-px w-8 bg-emerald;
 }
 
+/* Eyebrow sitting on a dark photo header. */
+.eyebrow-on-dark {
+  @apply text-emerald-pale;
+}
+
+.eyebrow-on-dark::before {
+  @apply bg-emerald-pale;
+}
+
 .heading-xl {
   @apply font-display font-semibold leading-[1.02] tracking-tightest;
 }

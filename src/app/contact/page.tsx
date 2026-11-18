@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact our recycling and commodity-trading team in Canada and the UAE. Request a quote or discuss your material.",
+    "Contact our recycling and commodity-trading team in Canada and the UAE. Request a quote or discuss your material — we also work with suppliers and buyers across the United States.",
 };
 
 const offices = [
@@ -23,7 +23,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Contact"
         title="Let's talk about your material."
-        intro="Request a quote, ask about a program, or connect with our trading desk. We respond to every enquiry from Canada and the UAE."
+        intro="Request a quote, ask about a program, or connect with our trading desk. We work with partners across Canada, the United States and the UAE."
         image="/images/gallery/metal_1.jpeg"
       />
 
