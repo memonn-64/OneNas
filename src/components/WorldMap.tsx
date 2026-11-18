@@ -2,20 +2,40 @@
 
 import { motion } from "framer-motion";
 
-// Simplified world map SVG highlighting Canada and UAE operations.
+// Simplified world map SVG highlighting Canada and UAE offices plus our
+// United States trade market.
 // The viewBox is a standard equirectangular projection (-180 to 180 lng, -90 to 90 lat).
 // Coordinates: Canada ~(-96, 60) → x≈588, y≈150; UAE ~(54, 24) → x≈1300, y≈370
 
 const DOT_SIZE = 10;
 
-const locations = [
+type Location = {
+  id: string;
+  label: string;
+  sublabel: string;
+  cx: number;
+  cy: number;
+  kind: "office" | "market";
+};
+
+const locations: Location[] = [
   {
     id: "canada",
     label: "Canada Office",
     sublabel: "Ontario",
     // Approximate SVG position for Canada
     cx: 310,
-    cy: 195,
+    cy: 185,
+    kind: "office",
+  },
+  {
+    id: "usa",
+    label: "United States",
+    sublabel: "Trade Market",
+    // Approximate SVG position for the continental US
+    cx: 288,
+    cy: 290,
+    kind: "market",
   },
   {
     id: "uae",
@@ -24,8 +44,12 @@ const locations = [
     // Approximate SVG position for UAE
     cx: 1155,
     cy: 310,
+    kind: "office",
   },
 ];
+
+const OFFICE_COLOR = "#1E3A8A";
+const MARKET_COLOR = "#198754";
 
 export default function WorldMap() {
   return (
@@ -34,11 +58,13 @@ export default function WorldMap() {
         <div className="mb-14 max-w-2xl">
           <p className="eyebrow">Global Operations</p>
           <h2 className="heading-xl mt-5 text-3xl text-forest md:text-4xl">
-            Two continents. One integrated network.
+            Three markets. One integrated network.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-charcoal/70">
-            Since 2001, our operations across Canada and the UAE have given partners
-            access to a reliable, international recycling and commodity-trading network.
+            Since 2001, our offices in Canada and the UAE — together with the
+            suppliers and buyers we work with across the United States — have given
+            partners access to a reliable, international recycling and
+            commodity-trading network.
           </p>
         </div>
 
@@ -46,7 +72,7 @@ export default function WorldMap() {
           <svg
             viewBox="0 0 1440 720"
             className="h-auto w-full"
-            aria-label="World map showing OneNas operations in Canada and UAE"
+            aria-label="World map showing OneNas offices in Canada and the UAE and its trade market in the United States"
           >
             {/* Ocean background */}
             <rect width="1440" height="720" fill="#EBF5FF" />
@@ -116,20 +142,30 @@ export default function WorldMap() {
               strokeWidth="1"
             />
 
-            {/* Connection line between Canada and UAE */}
+            {/* Trade routes: Canada → UAE and United States → UAE */}
             <motion.path
-              d={`M ${locations[0].cx} ${locations[0].cy} Q 730 160 ${locations[1].cx} ${locations[1].cy}`}
+              d="M 310 185 Q 730 130 1155 310"
               fill="none"
-              stroke="#1E3A8A"
+              stroke={OFFICE_COLOR}
               strokeWidth="1.5"
               strokeDasharray="6 4"
               initial={{ pathLength: 0, opacity: 0 }}
               animate={{ pathLength: 1, opacity: 0.6 }}
               transition={{ duration: 2, ease: "easeInOut", delay: 0.5 }}
             />
+            <motion.path
+              d="M 288 290 Q 720 420 1155 310"
+              fill="none"
+              stroke={MARKET_COLOR}
+              strokeWidth="1.5"
+              strokeDasharray="6 4"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ pathLength: 1, opacity: 0.6 }}
+              transition={{ duration: 2, ease: "easeInOut", delay: 0.9 }}
+            />
 
             {/* Location dots */}
-            {locations.map((loc) => (
+            {locations.map((loc, i) => (
               <g key={loc.id}>
                 {/* Pulse ring */}
                 <motion.circle
@@ -137,18 +173,18 @@ export default function WorldMap() {
                   cy={loc.cy}
                   r={DOT_SIZE + 6}
                   fill="none"
-                  stroke="#1E3A8A"
+                  stroke={loc.kind === "office" ? OFFICE_COLOR : MARKET_COLOR}
                   strokeWidth="1.5"
                   initial={{ opacity: 0.6, scale: 1 }}
                   animate={{ opacity: 0, scale: 2.2 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeOut", delay: loc.id === "uae" ? 0.5 : 0 }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeOut", delay: i * 0.4 }}
                 />
                 {/* Dot */}
                 <circle
                   cx={loc.cx}
                   cy={loc.cy}
                   r={DOT_SIZE}
-                  fill="#1E3A8A"
+                  fill={loc.kind === "office" ? OFFICE_COLOR : MARKET_COLOR}
                   stroke="white"
                   strokeWidth="2.5"
                 />
@@ -162,7 +198,7 @@ export default function WorldMap() {
                   textAnchor="middle"
                   fontSize="11"
                   fontWeight="700"
-                  fill="#1E3A8A"
+                  fill={loc.kind === "office" ? OFFICE_COLOR : MARKET_COLOR}
                   className="font-sans"
                 >
                   {loc.label}
@@ -184,7 +220,11 @@ export default function WorldMap() {
           <div className="flex items-center justify-center gap-8 border-t border-gray-line px-8 py-5">
             {locations.map((loc) => (
               <div key={loc.id} className="flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-royal" />
+                <span
+                  className={`h-3 w-3 rounded-full ${
+                    loc.kind === "office" ? "bg-royal" : "bg-emerald"
+                  }`}
+                />
                 <span className="text-sm font-medium text-charcoal">{loc.label}</span>
               </div>
             ))}

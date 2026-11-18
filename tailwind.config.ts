@@ -8,16 +8,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Green family — the brand anchor, dark to light.
+        "forest-deep": "#073B24",
         forest: "#0F5132",
+        "forest-mid": "#166F45",
         emerald: "#198754",
         "emerald-light": "#1f9e6a",
+        "emerald-pale": "#8FE3BE",
+        mint: "#E9F6EF",
+
+        // Teal / lime — the bridge between the green and the blue.
+        "teal-deep": "#0B4F5C",
+        teal: "#0E7C8A",
+        "teal-light": "#2FA8B5",
+        lime: "#5FD9A4",
+        "lime-soft": "#C3F1DB",
+
+        // Blue family.
+        "royal-deep": "#152C66",
+        royal: "#1E3A8A",
+        "royal-mid": "#2563EB",
+        "royal-light": "#3B82F6",
+        "sky-tint": "#EFF4FD",
+
         charcoal: "#2B2F33",
         "gray-soft": "#F4F6F5",
         "gray-line": "#E3E8E5",
         trust: "#1B5E8C",
-        royal: "#1E3A8A",
-        "royal-mid": "#2563EB",
-        "royal-light": "#3B82F6",
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],

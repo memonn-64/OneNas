@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "Recycling and commodity trading since 2001. We purchase, process, trade, export and recycle scrap paper, plastic, metal, used engine oil and tires across Canada and the UAE.",
+    "Recycling and commodity trading since 2001. We purchase, process, trade, export and recycle scrap paper, plastic, metal, used engine oil and tires across Canada, the United States and the UAE.",
   keywords: [
     "recycling",
     "commodity trading",
@@ -38,12 +38,13 @@ export const metadata: Metadata = {
     "tire recycling",
     "circular economy",
     "Canada",
+    "United States",
     "UAE",
   ],
   openGraph: {
     title: `${site.name} | International Recycling & Commodity Trading`,
     description:
-      "Transforming waste into value since 2001. Recycling and commodity trading across Canada and the UAE.",
+      "Transforming waste into value since 2001. Recycling and commodity trading across Canada, the United States and the UAE.",
     type: "website",
     locale: "en_CA",
   },

@@ -5,7 +5,7 @@ import { Reveal, RevealGroup, Item } from "@/components/motion";
 
 export default function Services() {
   return (
-    <section className="bg-gray-soft py-24 md:py-32">
+    <section className="bg-mint py-24 md:py-32">
       <div className="container-x">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">What We Do</p>

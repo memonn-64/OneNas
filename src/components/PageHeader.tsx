@@ -17,13 +17,14 @@ export default function PageHeader({
         <img
           src={image}
           alt=""
-          className="h-full w-full object-cover opacity-40"
+          className="h-full w-full object-cover opacity-70"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/70 to-forest/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/95 via-forest/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/15 to-transparent" />
       </div>
       <div className="container-x relative">
         <Reveal>
-          <p className="eyebrow text-emerald-light before:bg-emerald-light">
+          <p className="eyebrow eyebrow-on-dark">
             {eyebrow}
           </p>
           <h1 className="heading-xl mt-5 max-w-4xl text-4xl text-white md:text-6xl">

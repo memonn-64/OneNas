@@ -10,7 +10,7 @@ export default function CtaBand({
   text?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-forest">
+    <section className="relative overflow-hidden bg-gradient-to-br from-forest-deep via-forest to-forest-mid">
       <div className="absolute inset-0 opacity-[0.07]">
         <svg width="100%" height="100%">
           <pattern id="cta-grid" width="48" height="48" patternUnits="userSpaceOnUse">

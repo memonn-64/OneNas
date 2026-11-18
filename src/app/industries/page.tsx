@@ -1,43 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { X, ZoomIn } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CtaBand from "@/components/CtaBand";
 import { Reveal, RevealGroup, Item } from "@/components/motion";
-
-// Add your images to /public/images/ and list them here.
-// Format: { src, caption, category }
-const gallery = [
-  { src: "/images/gallery/metal_1.jpeg", caption: "Metal Scrap", category: "Metal Recycling" },
-  { src: "/images/gallery/metal.jpeg", caption: "Metal Scrap", category: "Metal Recycling" },
-  { src: "/images/gallery/metal1.jpeg", caption: "Metal Scrap", category: "Metal Recycling" },
-  { src: "/images/gallery/metal2.jpeg", caption: "Metal Scrap", category: "Metal Recycling" },
-  { src: "/images/gallery/oil_1.jpeg", caption: "Used Oil", category: "Used Oil" },
-  { src: "/images/gallery/oil_2.jpeg", caption: "Used Oil", category: "Used Oil" },
-  { src: "/images/gallery/oil_3.jpeg", caption: "Used Oil", category: "Used Oil" },
-  { src: "/images/gallery/paper_1.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
-  { src: "/images/gallery/paper.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
-  { src: "/images/gallery/paper1.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
-  { src: "/images/gallery/paper2.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
-  { src: "/images/gallery/paper3.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
-  { src: "/images/gallery/paper4.jpeg", caption: "Scrap Paper", category: "Scrap Paper" },
-  { src: "/images/gallery/plastic.jpeg", caption: "Plastic", category: "Plastic Recycling" },
-  { src: "/images/gallery/plastic_2.jpeg", caption: "Plastic", category: "Plastic Recycling" },
-  { src: "/images/gallery/plastic_4.jpeg", caption: "Plastic", category: "Plastic Recycling" },
-  { src: "/images/gallery/plastic_6.jpeg", caption: "Plastic", category: "Plastic Recycling" },
-  { src: "/images/gallery/tire.jpeg", caption: "Tires", category: "Tire Recycling" },
-  { src: "/images/gallery/tire1.jpeg", caption: "Tires", category: "Tire Recycling" },
-  { src: "/images/gallery/tirewire.jpeg", caption: "Tire Wire", category: "Tire Recycling" },
-  { src: "/images/gallery/tirewire1.jpeg", caption: "Tire Wire", category: "Tire Recycling" },
-  { src: "/images/gallery/tirewire2.jpeg", caption: "Tire Wire", category: "Tire Recycling" },
-];
-
-const categories = ["All", ...Array.from(new Set(gallery.map((g) => g.category)))];
+import { gallery, categories, categoryBySlug } from "@/lib/gallery";
 
 export default function GalleryPage() {
   const [active, setActive] = useState("All");
   const [lightbox, setLightbox] = useState<number | null>(null);
+
+  // Deep links from /services (e.g. /industries#used-oil) open the gallery
+  // already filtered to that material.
+  useEffect(() => {
+    const applyHash = () => {
+      const slug = decodeURIComponent(window.location.hash.replace("#", ""));
+      const category = categoryBySlug[slug];
+      if (category) setActive(category);
+    };
+    applyHash();
+    window.addEventListener("hashchange", applyHash);
+    return () => window.removeEventListener("hashchange", applyHash);
+  }, []);
 
   const filtered = active === "All" ? gallery : gallery.filter((g) => g.category === active);
 

@@ -5,7 +5,7 @@ const reasons = [
   {
     icon: Globe2,
     title: "International Reach",
-    text: "Operations in Canada and the UAE connect your material to buyers worldwide.",
+    text: "Offices in Canada and the UAE plus an active U.S. network connect your material to buyers worldwide.",
   },
   {
     icon: Truck,
@@ -31,7 +31,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 md:py-32">
+    <section className="bg-sky-tint py-24 md:py-32">
       <div className="container-x">
         <Reveal className="max-w-2xl">
           <p className="eyebrow">Why Choose Us</p>
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
               </p>
             </Item>
           ))}
-          <Item className="flex flex-col justify-center bg-forest p-8 text-white">
+          <Item className="flex flex-col justify-center bg-gradient-to-br from-forest to-royal p-8 text-white">
             <p className="font-display text-xl font-semibold leading-snug">
               Trusted by industrial generators and global buyers alike.
             </p>

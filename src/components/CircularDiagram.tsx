@@ -18,7 +18,7 @@ export default function CircularDiagram() {
               <span className="text-xs font-semibold tracking-[0.18em] text-emerald">
                 {s.n}
               </span>
-              <span className="mt-4 grid h-14 w-14 place-items-center rounded-full bg-forest text-white">
+              <span className="mt-4 grid h-14 w-14 place-items-center rounded-full bg-gradient-to-br from-forest to-teal-deep text-white">
                 <s.icon size={24} strokeWidth={1.8} />
               </span>
               <span className="mt-4 font-display text-lg font-semibold text-charcoal">

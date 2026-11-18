@@ -4,7 +4,7 @@ import { nav, site } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-forest text-white">
+    <footer className="bg-gradient-to-b from-forest to-forest-deep text-white">
       <div className="container-x py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
@@ -16,8 +16,8 @@ export default function Footer() {
             </div>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/70">
               International recycling and commodity trading since {site.founded}.
-              Turning recoverable materials into measurable value across Canada and
-              the UAE.
+              Turning recoverable materials into measurable value across Canada,
+              the United States and the UAE.
             </p>
             <Link
               href={site.linkedin}
@@ -52,13 +52,13 @@ export default function Footer() {
             </h4>
             <ul className="mt-5 space-y-4 text-sm text-white/80">
               <li className="flex items-start gap-3">
-                <Mail size={16} className="mt-0.5 shrink-0 text-emerald-light" />
+                <Mail size={16} className="mt-0.5 shrink-0 text-lime" />
                 <a href={`mailto:${site.email}`} className="hover:text-white">
                   {site.email}
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Phone size={16} className="mt-0.5 shrink-0 text-emerald-light" />
+                <Phone size={16} className="mt-0.5 shrink-0 text-lime" />
                 <span>
                   {site.phoneCanada} <span className="text-white/40">(CA)</span>
                   <br />
@@ -76,7 +76,7 @@ export default function Footer() {
             </h4>
             <ul className="mt-5 space-y-4 text-sm text-white/80">
               <li className="flex items-start gap-3">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-emerald-light" />
+                <MapPin size={16} className="mt-0.5 shrink-0 text-lime" />
                 <span>
                   <span className="block font-medium text-white">
                     {site.offices.canada.label}
@@ -85,7 +85,7 @@ export default function Footer() {
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-emerald-light" />
+                <MapPin size={16} className="mt-0.5 shrink-0 text-lime" />
                 <span>
                   <span className="block font-medium text-white">
                     {site.offices.uae.label}
