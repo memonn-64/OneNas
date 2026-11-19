@@ -12,11 +12,14 @@ export default function Hero() {
       <div className="absolute inset-0">
         {/* Replace with actual OneNas image: /images/hero/hero-main.jpg */}
         <img
-          src="/images/homepage.avif"
-          alt="Recycling facility processing recovered materials"
+          src="/images/gallery/plastic_4.jpeg"
+          alt="Baled recovered plastic stacked and ready for export"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(7,59,36,0.93)_0%,rgba(15,81,50,0.70)_58%,rgba(15,81,50,0)_90%)]" />
+        {/* Light enough that the bales still read as a photo rather than
+            flattening into a green field, but no lighter: over the brightest
+            part of the photo this still keeps the subheading at ~5:1. */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(10,63,38,0.86)_0%,rgba(20,87,47,0.60)_58%,rgba(20,87,47,0)_92%)]" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25" />
       </div>
 
@@ -50,7 +53,7 @@ export default function Hero() {
 
           <motion.p
             variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease } } }}
-            className="mt-7 max-w-2xl text-balance text-lg leading-relaxed text-white/80 md:text-xl"
+            className="mt-7 max-w-2xl text-balance text-lg leading-relaxed text-white/90 md:text-xl"
           >
             Recycling and commodity trading across{" "}
             <span className="font-semibold text-emerald-pale">Canada</span>, the{" "}

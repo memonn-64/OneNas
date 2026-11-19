@@ -22,7 +22,7 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Integrated recycling and commodity-trading programs."
         intro="From recovered fibre to non-ferrous metals, we manage each material stream end to end — purchasing, processing, exporting and recycling."
-        image="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?q=80&w=2400&auto=format&fit=crop"
+        image="/images/gallery/metal2.jpeg"
       />
 
       <div className="divide-y divide-gray-line">

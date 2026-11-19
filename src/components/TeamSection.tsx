@@ -8,7 +8,6 @@ const team = [
     title: "Founder & CEO",
     bio: "With over 20 years of experience in international recycling and commodity trading, our CEO has led OneNas from a focused recovered-material trader into an integrated operation spanning Canada, the United States and the UAE.",
     email: "onenasgroup@gmail.com",
-    // Replace with actual photo: /images/team/ceo.jpg
     photo: "/images/team/asif.png",
     initials: "CEO",
   },

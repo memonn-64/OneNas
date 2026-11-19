@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Recycle, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { nav, site } from "@/lib/site";
 
 export default function Footer() {
@@ -8,12 +8,11 @@ export default function Footer() {
       <div className="container-x py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-md bg-white/10">
-                <Recycle size={20} strokeWidth={2.2} />
-              </span>
-              <span className="font-display text-lg font-semibold">{site.name}</span>
-            </div>
+            <img
+              src="/images/logo-light.png"
+              alt={site.name}
+              className="h-11 w-auto"
+            />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/70">
               International recycling and commodity trading since {site.founded}.
               Turning recoverable materials into measurable value across Canada,

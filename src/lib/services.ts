@@ -39,7 +39,7 @@ export const services: Service[] = [
     title: "Scrap Paper Recycling",
     short:
       "Supplying recovered paper grades to paper mills, recycling facilities, and other downstream markets worldwide.",
-    image: "/images/services/paper_bales.jpg",
+    image: "/images/gallery/paper.jpeg",
     galleryCategory: "Scrap Paper",
     grades: ["OCC", "Mixed Paper", "Newsprint", "Cardboard"],
     detail:
@@ -51,7 +51,7 @@ export const services: Service[] = [
     title: "Plastic Recycling",
     short:
       "Connecting recyclable plastics with processors, manufacturers, and other recycling markets across global supply chains.",
-    image: "/images/services/plastic_scrap.jpg",
+    image: "/images/gallery/plastic.jpeg",
     galleryCategory: "Plastic Recycling",
     grades: ["PET", "HDPE", "LDPE", "Industrial Plastics"],
     detail:
@@ -63,7 +63,7 @@ export const services: Service[] = [
     title: "Metal Recycling",
     short:
       "Sourcing and supplying ferrous and non-ferrous metals to foundries, smelters, and industrial consumers worldwide.",
-    image: "/images/services/Metal_scrap.jpg",
+    image: "/images/gallery/metal.jpeg",
     galleryCategory: "Metal Recycling",
     grades: ["Ferrous Metals", "Non-Ferrous Metals", "Industrial Scrap", "Heavy Melting Scrap (HMS)"],
     detail:
@@ -75,7 +75,7 @@ export const services: Service[] = [
     title: "Tire Recycling",
     short:
       "Connecting end-of-life tires with recyclers, processors, and resource recovery partners across international markets.",
-    image: "/images/services/tire.jpg",
+    image: "/images/gallery/tire1.jpeg",
     galleryCategory: "Tire Recycling",
     grades: ["Global Sourcing", "Tire Trading", "Industry Partnerships"],
     detail:
@@ -88,7 +88,7 @@ export const services: Service[] = [
     short:
       "Supporting manufacturers, recyclers, and industrial buyers through global sourcing and commodity trading solutions.",
     image:
-      "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=1600&auto=format&fit=crop",
+      "/images/gallery/oil_2.jpeg",
     grades: ["International Sourcing", "Export & Import", "Supply Chain Management"],
     detail:
       "OneNas provides commodity trading solutions across a range of recyclable and industrial materials. With over two decades of experience, we connect buyers and sellers through reliable sourcing, competitive market access, and efficient logistics coordination across international markets.",
