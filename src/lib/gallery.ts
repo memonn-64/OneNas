@@ -25,9 +25,7 @@ export const gallery: GalleryItem[] = [
   { src: "/images/gallery/plastic_6.jpeg", caption: "Plastic", category: "Plastic Recycling" },
   { src: "/images/gallery/tire.jpeg", caption: "Tires", category: "Tire Recycling" },
   { src: "/images/gallery/tire1.jpeg", caption: "Tires", category: "Tire Recycling" },
-  { src: "/images/gallery/tirewire.jpeg", caption: "Tire Wire", category: "Tire Recycling" },
-  { src: "/images/gallery/tirewire1.jpeg", caption: "Tire Wire", category: "Tire Recycling" },
-  { src: "/images/gallery/tirewire2.jpeg", caption: "Tire Wire", category: "Tire Recycling" },
+  { src: "/images/gallery/tire2.jpeg", caption: "Tires", category: "Tire Recycling" },
 ];
 
 export const categories = [

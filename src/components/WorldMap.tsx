@@ -49,7 +49,7 @@ const locations: Location[] = [
 ];
 
 const OFFICE_COLOR = "#1E3A8A";
-const MARKET_COLOR = "#198754";
+const MARKET_COLOR = "#2B7A44";
 
 export default function WorldMap() {
   return (

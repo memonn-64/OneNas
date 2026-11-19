@@ -32,7 +32,7 @@ export default function AboutPage() {
         eyebrow="About Us"
         title="Two decades turning recoverable material into value."
         intro="Founded in 2001, we have spent more than twenty years building a reliable, international recycling and commodity-trading business."
-        image="/images/about/5streams.png"
+        image="/images/gallery/paper2.jpeg"
       />
 
       <section className="py-24 md:py-32">
@@ -44,9 +44,9 @@ export default function AboutPage() {
             </h2>
             <div className="mt-8 overflow-hidden rounded-2xl shadow-card">
               <img
-                src="/images/about/factory.png"
-                alt="OneNas processing facility"
-                className="w-full object-cover"
+                src="/images/gallery/paper_1.jpeg"
+                alt="Recovered paper stock inside a OneNas facility"
+                className="aspect-[4/3] w-full object-cover"
               />
             </div>
           </Reveal>

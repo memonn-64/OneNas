@@ -86,7 +86,7 @@ export default function GalleryPage() {
           </RevealGroup>
 
           <Reveal className="mt-8 text-center text-sm text-charcoal/40">
-            More images coming soon — drop your photos in /public/images/ to add them here.
+            More photos from our yards and shipments are added as material moves.
           </Reveal>
         </div>
       </section>

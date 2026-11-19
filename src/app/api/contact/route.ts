@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     subject: `New Quote Request from ${name}${company ? ` (${company})` : ""}`,
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #0F5132;">New Contact Form Submission</h2>
+        <h2 style="color: #14572F;">New Contact Form Submission</h2>
         <table style="width:100%; border-collapse: collapse;">
           <tr><td style="padding: 8px; color: #666; width: 140px;">Name</td><td style="padding: 8px; font-weight: 600;">${name}</td></tr>
           ${company ? `<tr><td style="padding: 8px; color: #666;">Company</td><td style="padding: 8px;">${company}</td></tr>` : ""}

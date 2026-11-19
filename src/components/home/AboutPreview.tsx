@@ -2,6 +2,17 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Reveal } from "@/components/motion";
 
+// One photo per material stream, so the card shows the whole business rather
+// than whichever single material happened to be picked. The big tile leads;
+// the four small ones fill the right half of a 4x2 grid.
+const streams = [
+  { src: "/images/gallery/paper1.jpeg", label: "Scrap paper", feature: true },
+  { src: "/images/gallery/plastic_2.jpeg", label: "Plastic" },
+  { src: "/images/gallery/metal1.jpeg", label: "Metal" },
+  { src: "/images/gallery/oil_3.jpeg", label: "Used oil" },
+  { src: "/images/gallery/tire2.jpeg", label: "Tires" },
+];
+
 const points = [
   "Two decades of recycling and commodity-trading expertise",
   "Established operations in Canada and the UAE, trading across the United States",
@@ -13,15 +24,33 @@ export default function AboutPreview() {
     <section className="py-24 md:py-32">
       <div className="container-x grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal className="relative">
-          <div className="relative overflow-hidden rounded-2xl shadow-card">
-            {/* Replace with actual OneNas image: /images/about/about-preview.jpg */}
-            <img
-              src="/images/about/recycling_homepage_image.webp"
-              alt="Baled recovered material ready for export"
-              className="aspect-[4/3] w-full object-cover"
-            />
+          <div className="relative grid aspect-[4/3] grid-cols-4 grid-rows-2 gap-1.5 overflow-hidden rounded-2xl shadow-card">
+            {streams.map((s) => (
+              <div
+                key={s.src}
+                className={`group relative overflow-hidden ${
+                  s.feature ? "col-span-2 row-span-2" : ""
+                }`}
+              >
+                <img
+                  src={s.src}
+                  alt={`${s.label} handled by OneNas`}
+                  className="h-full w-full object-cover"
+                />
+                {/* Labels sit at the top: the 2001 badge overlaps the bottom
+                    of the card, and at the bottom it buried a whole tile. */}
+                <div className="absolute inset-x-0 top-0 bg-gradient-to-b from-black/65 to-transparent pb-6" />
+                <span
+                  className={`absolute left-2 top-1.5 font-semibold uppercase tracking-[0.1em] text-white ${
+                    s.feature ? "text-[11px]" : "text-[9px]"
+                  }`}
+                >
+                  {s.label}
+                </span>
+              </div>
+            ))}
           </div>
-          <div className="absolute -bottom-6 -right-4 hidden rounded-xl bg-gradient-to-br from-forest to-forest-mid p-6 text-white shadow-card-hover sm:block lg:-right-8">
+          <div className="absolute -bottom-6 -left-4 hidden rounded-xl bg-gradient-to-br from-forest to-forest-mid p-6 text-white shadow-card-hover sm:block">
             <div className="font-display text-4xl font-semibold">2001</div>
             <div className="mt-1 text-sm text-white/70">Established</div>
           </div>

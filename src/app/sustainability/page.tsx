@@ -25,7 +25,7 @@ export default function SustainabilityPage() {
         eyebrow="Sustainability"
         title="Supporting the Circular Economy"
         intro="Recycling is only valuable when material actually re-enters the economy. Our programs are built around diversion, recovery and measurable impact."
-        image="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=2400&auto=format&fit=crop"
+        image="/images/gallery/plastic_6.jpeg"
       />
 
       <section className="py-24 md:py-32">

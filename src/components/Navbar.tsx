@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Menu, X, Recycle } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { nav, site } from "@/lib/site";
 
 export default function Navbar() {
@@ -20,30 +20,41 @@ export default function Navbar() {
 
   useEffect(() => setOpen(false), [pathname]);
 
+  // The bar is white once you scroll, and also while the mobile menu is down.
+  const onLight = scrolled || open;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-[0_1px_0_rgba(15,81,50,0.08)]"
+        onLight
+          ? "bg-white/90 backdrop-blur-md shadow-[0_1px_0_rgba(20,87,47,0.08)]"
           : "bg-transparent"
       }`}
     >
       <nav className="container-x flex h-[72px] items-center justify-between">
-        <Link href="/" className="group flex items-center gap-2.5">
-          <span
-            className={`grid h-9 w-9 place-items-center rounded-md transition-colors ${
-              scrolled ? "bg-forest text-white" : "bg-white/15 text-white backdrop-blur"
+        {/* Both prints of the lockup are mounted so the swap between the
+            transparent navbar (dark photo behind it) and the scrolled white one
+            cross-fades, rather than flashing while a new src loads. */}
+        <Link
+          href="/"
+          aria-label={`${site.name} — home`}
+          className="relative block h-10 w-[150px] shrink-0 md:h-11 md:w-[168px]"
+        >
+          <img
+            src="/images/logo.png"
+            alt={site.name}
+            className={`absolute left-0 top-1/2 h-full w-auto -translate-y-1/2 transition-opacity duration-300 ${
+              onLight ? "opacity-100" : "opacity-0"
             }`}
-          >
-            <Recycle size={20} strokeWidth={2.2} />
-          </span>
-          <span
-            className={`font-display text-lg font-semibold tracking-tight transition-colors ${
-              scrolled ? "text-forest" : "text-white"
+          />
+          <img
+            src="/images/logo-light.png"
+            alt=""
+            aria-hidden="true"
+            className={`absolute left-0 top-1/2 h-full w-auto -translate-y-1/2 transition-opacity duration-300 ${
+              onLight ? "opacity-0" : "opacity-100"
             }`}
-          >
-            {site.name}
-          </span>
+          />
         </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -54,7 +65,7 @@ export default function Navbar() {
                 <Link
                   href={n.href}
                   className={`link-underline text-sm font-medium transition-colors ${
-                    scrolled
+                    onLight
                       ? active
                         ? "text-emerald"
                         : "text-charcoal/80 hover:text-forest"
@@ -82,7 +93,7 @@ export default function Navbar() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((o) => !o)}
-          className={`lg:hidden ${scrolled || open ? "text-forest" : "text-white"}`}
+          className={`lg:hidden ${onLight ? "text-forest" : "text-white"}`}
         >
           {open ? <X size={26} /> : <Menu size={26} />}
         </button>
